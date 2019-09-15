@@ -29411,6 +29411,17 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/data/faculties.json":
+/*!******************************************!*\
+  !*** ./resources/js/data/faculties.json ***!
+  \******************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"id\":0,\"name\":\"Academia\",\"cover_img_url\":\"\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-academia\",\"description\":\"Academia is an institution\"},{\"id\":1,\"name\":\"Volunteers\",\"cover_img_url\":\"\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-volunteers\",\"description\":\"Academia is an institution\"},{\"id\":2,\"name\":\"Notice Board\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-noticeboard\",\"description\":\"Academia is an institution\"},{\"id\":3,\"name\":\"Machine Learning\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-machinelearning\",\"description\":\"Machine that can learn something new by program the system. \"},{\"id\":4,\"name\":\"Data Science\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-datascience\",\"description\":\"\"},{\"id\":5,\"name\":\"React Native\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"https://t.me/joinchat/ADNaO0l8x_dIBY3VDyWCLA\",\"description\":\"React Native is a field for building mobile application with high performance and quality.\"},{\"id\":6,\"name\":\"IoT\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-iot\",\"description\":\"\"},{\"id\":7,\"name\":\"UI / UX\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-uiux\",\"description\":\"\"},{\"id\":8,\"name\":\"Web\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-web\",\"description\":\"\"},{\"id\":9,\"name\":\"Java\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-java\",\"description\":\"\"},{\"id\":10,\"name\":\"Android\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-android\",\"description\":\"\"},{\"id\":11,\"name\":\"iOS\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-ios\",\"description\":\"\"},{\"id\":12,\"name\":\"Blockchain\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-blockchain\",\"description\":\"\"},{\"id\":13,\"name\":\"Arduino & Scratch\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-arduino_scratch\",\"description\":\"\"},{\"id\":14,\"name\":\"Architecture\",\"icon\":\"../img/devcon_group_icons/academia.png\",\"telegram_url\":\"http://link.devcon.my/telegram-architecture\",\"description\":\"\"}]");
+
+/***/ }),
+
 /***/ "./resources/js/pages/HomeIndexPage.js":
 /*!*********************************************!*\
   !*** ./resources/js/pages/HomeIndexPage.js ***!
@@ -29425,6 +29436,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/NavBar */ "./resources/js/components/NavBar.js");
+/* harmony import */ var _data_faculties_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/faculties.json */ "./resources/js/data/faculties.json");
+var _data_faculties_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../data/faculties.json */ "./resources/js/data/faculties.json", 1);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29442,6 +29455,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -29469,7 +29483,11 @@ function (_Component) {
         className: "card-header"
       }, "Hello"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-body"
-      }, "Hello"))));
+      }, _data_faculties_json__WEBPACK_IMPORTED_MODULE_3__.map(function (item) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, item.name, "- ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: item.telegram_url
+        }, "Telegram Link"));
+      })))));
     }
   }]);
 

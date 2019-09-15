@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import NavBar from '../components/NavBar'
 
+import faculties from '../data/faculties.json'
+
 class HomeIndexPage extends Component {
    render() {
        return (
@@ -17,7 +19,16 @@ class HomeIndexPage extends Component {
                     Hello
                 </div>
                     <div className="card-body">
-                        Hello
+                        {
+                            faculties.map((item)=>{
+                                return (
+                                    <li>
+                                        {item.name}
+                                         - <a href={item.telegram_url}>Telegram Link</a>
+                                    </li>
+                                )
+                            })
+                        }
                     </div>
                 </div>
 
