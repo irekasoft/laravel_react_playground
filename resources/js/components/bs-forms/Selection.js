@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import uuid from 'uuid/v4'
 
 class Selection extends Component {
 
@@ -19,7 +20,6 @@ class Selection extends Component {
 
   componentWillReceiveProps(props){
 
-
     this.setState({
       dataSource: props.dataSource,
     });
@@ -28,13 +28,17 @@ class Selection extends Component {
   render() {
     return (
       <div className="form-group">
-        <label htmlFor="">{this.props.label}</label>      <select className="form-control col-md-6" value={this.props.value} onChange={this.props.onChange}>
-          <option value="-1">{this.props.placeholder}</option>
+        { this.props.label && (
+            <label htmlFor="">{this.props.label}</label>
+        )
+        }
+        <select className={"form-control " + this.props.className} value={this.props.value} onChange={this.props.onChange} name={this.props.name} disabled={this.props.disabled} >
+          <option value={this.props.default_value ? this.props.default_value : -1} >{this.props.placeholder}</option>
           {
             this.state.dataSource.map((item,index)=>{
               return (
-              <React.Fragment>
-              <option value={index}>{item.name}</option>
+              <React.Fragment key={uuid()}>
+              <option value={item.value ? item.value : index} >{item.label}</option>
               </React.Fragment>
             )
             })

@@ -1,8 +1,22 @@
 // Fonts
-// @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}

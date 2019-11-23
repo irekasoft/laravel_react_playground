@@ -13,3 +13,5 @@ const mix = require('laravel-mix');
 
 mix.react('resources/js/pages/HomeIndexPage.js', 'public/js/pages')
    .sass('resources/sass/app.scss', 'public/css');
+
+mix.react('resources/js/pages/HomeSecondPage.js', 'public/js/pages');

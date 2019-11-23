@@ -17,7 +17,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Bootstrap core CSS-->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> --}}
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,25 +34,24 @@
 
   <body id="page">
 
-      <div id="content-wrapper">
-        <div class="container-fluid">
-            @yield('content')
-        </div>
-        <!-- /.container-fluid -->
+    <div id="content-wrapper">
+      <div class="container-fluid" style="padding-left:0;padding-right:0;">
+          @yield('content')
       </div>
-      <!-- /.content-wrapper -->
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-wrapper -->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{ URL::asset('vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="{{ URL::asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="{{ URL::asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- Core plugin JavaScript-->
+<script src="{{ URL::asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    @yield('script')
+@yield('script')
 
-  </body>
-
+</body>
 
 </html>

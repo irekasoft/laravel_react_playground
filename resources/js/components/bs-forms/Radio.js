@@ -11,7 +11,7 @@ class Radio extends Component {
 
   toggleCheckboxChange(){
     const { handleCheckboxChange, label } = this.props;
-
+    
     handleCheckboxChange(label);
   }
 
@@ -30,5 +30,6 @@ class Radio extends Component {
     );
   }
 }
+
 
 export { Radio };

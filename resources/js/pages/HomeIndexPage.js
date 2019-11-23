@@ -2,30 +2,29 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import NavBar from '../components/NavBar'
 
+import uuid from 'uuid/v4'
+
 import faculties from '../data/faculties.json'
 
 class HomeIndexPage extends Component {
    render() {
        return (
-         <div>
-
+         <React.Fragment>
             <NavBar/>
 
-            <div className="container">
-                <h3>This Is React.JS</h3>
+            <div className="container py-2">
 
+                <h3>This Is React.JS</h3>
                 <div className="card">
-                <div className="card-header">
-                    Hello
-                </div>
-                    <div className="card-body">
+
+                    <div className="card-body grid-container">
                         {
                             faculties.map((item)=>{
                                 return (
-                                    <li>
-                                        {item.name}
-                                         - <a href={item.telegram_url}>Telegram Link</a>
-                                    </li>
+                                    <div className="grid-item" key={uuid()}>
+                                        {item.name}<br/>
+                                         <a href={item.telegram_url}>Telegram Link</a>
+                                    </div>
                                 )
                             })
                         }
@@ -33,9 +32,7 @@ class HomeIndexPage extends Component {
                 </div>
 
             </div>
-
-         </div>
-
+         </React.Fragment>
 
        );
    }
@@ -52,4 +49,4 @@ if (document.getElementById("root")) {
 
     ReactDOM.render(<HomeIndexPage {...props} />, document.getElementById("root"));
 
-  }
+}

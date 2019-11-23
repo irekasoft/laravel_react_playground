@@ -9,8 +9,8 @@ class TextArea extends Component {
   render() {
     return (
       <div className="form-group">
-        <label htmlFor="phone_no_office" className="control-label">{this.props.label}</label>
-        <textarea className={"form-control " + this.isInvalid()} name="phone_no_office" type="text" rows="6"
+        <label htmlFor="phone_no_office" className="control-label"><h6>{this.props.label}</h6></label>
+        <textarea className={"form-control " + this.isInvalid()} name="phone_no_office" type="text" rows={this.props.rows ? this.props.rows : "6"}
         placeholder={ this.props.placeholder } value={this.props.value}
         onChange={(e)=>{this.props.onChangeText(e.target.value)}}
         disabled={ this.props.disabled }>
